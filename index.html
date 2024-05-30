@@ -16,7 +16,22 @@
 
 <body>
     <div id="app">
-
+        <h1>To do List</h1>
+        <section>
+            <ul v-for="(item, index) in toDoList" :key="index">
+                <li>
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+                        <span :class="item.done ? 'checked' : ''">{{ item.content }}</span>
+                    </div>
+                    <div class="buttons">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <i class="fa-regular fa-trash-can" @click="removeTask(index)"></i>
+                    </div>
+                </li>
+            </ul>
+            <input type="text">
+        </section>
     </div>
     <!-- Scripts -->
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>

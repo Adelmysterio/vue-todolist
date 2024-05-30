@@ -4,3 +4,40 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#app {
+    padding: 3rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: .33rem;
+}
+
+.checked{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.fa-check {
+    margin-right: 1rem;
+}
+
+.buttons i {
+    margin-right: 1rem;
+}
