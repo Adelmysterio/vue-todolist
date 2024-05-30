@@ -26,7 +26,7 @@ createApp({
                     done: false
                 },
             ],
-
+            newTaskContent: null
         }
     },
 
@@ -40,6 +40,14 @@ createApp({
                 content: newContent,
                 done: false
             };
+            if (newContent.trim().length > 0) {
+                this.toDoList.push(newTask)
+            }
+            this.clearNewTask()
+        },
+
+        clearNewTask: function () {
+            this.newTaskContent = ''
         }
     }
 
