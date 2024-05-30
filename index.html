@@ -21,19 +21,23 @@
             <section class="list-area">
                 <ul v-for="(item, index) in toDoList" :key="index">
                     <li>
-                        <div>
-                            <i class="fa-solid fa-check" @click="invertDoneValue(index)"></i>
+                        <section>
+                            <div class="check-icon" @click="invertDoneValue(index)">
+                                <i
+                                    :class="item.done===false ? 'fa-solid fa-check bg-green' : 'fa-regular fa-circle-xmark bg-gray'"></i>
+                            </div>
                             <span :class="item.done ? 'checked' : ''">{{ item.content }}</span>
-                        </div>
-                        <div class="buttons-area">
+
+                        </section>
+                        <section class="buttons-area">
                             <i class="fa-regular fa-pen-to-square" @click="editTask(index)"></i>
                             <i class="fa-regular fa-trash-can" @click="removeTask(index)"></i>
-                        </div>
+                        </section>
                     </li>
                 </ul>
                 <section class="input-area">
                     <label for="task">Inserisci una nuova Task</label>
-                    <input type="text" id="task" v-model="newTaskContent" @keyup.enter="addNewTask">
+                    <input type="text" id="task" v-model="newTaskContent" @keyup.enter="addNewTask(newTaskContent)">
                     <button @click="addNewTask(newTaskContent)">Aggiungi</button>
                 </section>
             </section>

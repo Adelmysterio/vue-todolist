@@ -13,8 +13,10 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 3rem;
+    background-color: #c9d8ff;
 }
 
 h1 {
@@ -30,29 +32,71 @@ ul {
 li {
     display: flex;
     justify-content: space-between;
-    margin-bottom: .33rem;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.checked{
+
+.checked {
     text-decoration: line-through;
     color: gray;
 }
 
-.fa-check {
+div.check-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    aspect-ratio: 1/1;
     margin-right: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bg-green {
+    padding: 3rem;
+    background-color: chartreuse;
+    
+}
+
+.bg-gray {
+    padding: 3rem;
+    background-color: rgb(185, 185, 185);
 }
 
 .buttons-area i {
     margin-right: 1rem;
+    cursor: pointer;
+}
+
+.fa-trash-can {
+    color: red;
 }
 
 .input-area {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.input-area label {
+    margin-left: 1rem;
 }
 
 .input-area input {
     margin: 1rem;
     width: 50%;
-    height: 2rem;
+    height: 2rem;;
+}
+
+.input-area button {
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: chartreuse; 
+    margin-right: 1rem;
 }
