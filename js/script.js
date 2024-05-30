@@ -48,6 +48,14 @@ createApp({
 
         clearNewTask: function () {
             this.newTaskContent = ''
+        },
+
+        invertDoneValue: function(i) {
+            this.toDoList[i].done = !this.toDoList[i].done
+        },
+
+        editTask: function(i) {
+            this.toDoList[i].content = prompt('Modifica la Task '+ this.toDoList[i].content)
         }
     }
 

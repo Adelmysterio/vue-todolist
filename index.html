@@ -18,15 +18,15 @@
     <div id="app">
         <div class="container">
             <h1>To do List</h1>
-            <section>
+            <section class="list-area">
                 <ul v-for="(item, index) in toDoList" :key="index">
                     <li>
                         <div>
-                            <i class="fa-solid fa-check"></i>
+                            <i class="fa-solid fa-check" @click="invertDoneValue(index)"></i>
                             <span :class="item.done ? 'checked' : ''">{{ item.content }}</span>
                         </div>
                         <div class="buttons-area">
-                            <i class="fa-regular fa-pen-to-square"></i>
+                            <i class="fa-regular fa-pen-to-square" @click="editTask(index)"></i>
                             <i class="fa-regular fa-trash-can" @click="removeTask(index)"></i>
                         </div>
                     </li>
