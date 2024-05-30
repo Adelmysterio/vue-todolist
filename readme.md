@@ -28,5 +28,11 @@ creo un metodo che rimuova dal array l elemento all indice corrispondente
 <!-- MILESTONE 3 -->
 creo un input ad html con un bottone
 
-creo una funzione addNewTask
-    dichiaro una oggetto newTask con le stesse chiavi di ToDoList che abbia come contenuto il v-model di input
+dichiro in data una nuova istanza newTaskcontent null
+
+creo una funzione addNewTask con argomento 
+    dichiaro una oggetto newTask con le stesse chiavi di ToDoList che abbia come contenuto newTaskContent
+
+nel html imposto il v-model di input su newTaskcontent e invoco la funzione addNewTask al keyup.enter
+
+invoco la funzione al click del bottone
